@@ -7,16 +7,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.min.js"></script>
     <script>
       requirejs.config({
-        deps: ['./dist/manifest.js']
+        baseUrl: 'http://localhost:8080/dist/',
+        deps: ['/dist/manifest.js']
       })
     </script>
 
     <script>
-      require(['./dist/output.js'], args => {
+      require(['/dist/output.js'], args => {
         console.log(args)
       })
     </script>
-    <!-- <script src="./dist/manifest.js"></script>
-    <script src="./dist/output.js"></script> -->
   </body>
 </html>

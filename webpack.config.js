@@ -8,7 +8,7 @@ module.exports = {
     output: './src/main.ts'
   },
   output: {
-    publicPath: '/dist/',
+    publicPath: 'http://localhost:8080/dist/',
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
     chunkFilename: '[name].js',
@@ -40,5 +40,6 @@ module.exports.plugins = [
   new webpack.optimize.CommonsChunkPlugin({
     name: 'manifest',
     minChunks: Infinity
-  })
+  }),
+  new webpack.NamedChunksPlugin()
 ]
