@@ -4,11 +4,12 @@ var webpack = require('webpack')
 module.exports = {
   // configuration
   entry: {
-    fileA: './src/fileA.ts',
+    // fileA: './src/fileA.ts',
+    polyfill: ['babel-polyfill', 'whatwg-fetch'],
     output: './src/main.ts'
   },
   output: {
-    publicPath: 'http://localhost:8080/dist/',
+    publicPath: './dist/',
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
     chunkFilename: '[name].js',
@@ -32,8 +33,7 @@ module.exports = {
   },
   performance: {
     hints: false
-  },
-  devtool: '#source-map'
+  }
 }
 
 module.exports.plugins = [
@@ -41,5 +41,6 @@ module.exports.plugins = [
     name: 'manifest',
     minChunks: Infinity
   }),
-  new webpack.NamedChunksPlugin()
+  new webpack.NamedChunksPlugin(),
+  new webpack.optimize.UglifyJsPlugin()
 ]

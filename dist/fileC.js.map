@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./src/fileC.js"],"names":[],"mappings":";;;;;;;;AAAA;;AAEA","file":"fileC.js","sourcesContent":["export var c = 5\r\n\r\nconsole.log('fileC Content')\r\n\n\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/fileC.js\n// module id = 3\n// module chunks = 1"],"sourceRoot":""}
