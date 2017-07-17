@@ -7,12 +7,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.min.js"></script>
     <script>
       requirejs.config({
-        deps: ['./dist/polyfill.js', './dist/manifest.js']
+        deps: ['./dist/manifest.js', './dist/polyfill.js']
       })
     </script>
 
     <script>
-      require(['./dist/output.js'], args => {
+      require(['./dist/output.js'], function (args) {
         console.log(args)
       })
     </script>

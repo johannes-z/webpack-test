@@ -1,16 +1,3 @@
 {
-    "presets": [
-    [
-      "env",
-      {
-        "targets": {
-          "browsers": [
-            "last 5 versions",
-            "IE >= 9"
-          ]
-        },
-        "useBuiltIns": true
-      }
-    ]
-  ]
+  "presets": ["latest"]
 }
