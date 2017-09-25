@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
     "allowJs": true,
-    "module": "esnext",
-    "lib": [ "esnext" ],
+    "module": "amd",
+    "target": "es5",
+    "lib": [ "esnext", "dom" ],
     "sourceMap": true
   }
 }

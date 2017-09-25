@@ -1,11 +1,5 @@
-const fileA = import(
-  /* webpackChunkName: "fileA" */
-  /* webpackMode: "lazy" */
-  './fileA')
-
-fileA.then(fileA => {
-  console.log(fileA.bla);
-})
+import { bla } from './fileA'
+// console.log(bla);
 
 class Student {
     fullName: string;

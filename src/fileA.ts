@@ -1,12 +1,12 @@
-import { test } from './fileB'
-const fileC = import(
-  /* webpackChunkName: "fileC" */
-  /* webpackMode: "lazy" */
-  './fileC')
+import fileB from './fileB'
+// const fileC = import(
+//   /* webpackChunkName: "fileC" */
+//   /* webpackMode: "lazy" */
+//   './fileC')
 
-Promise.all([fileC]).then(args => {
-  console.log(test);
-  console.log(...args)
-})
+// Promise.all([fileC]).then(args => {
+//   console.log(fileB);
+//   console.log(...args)
+// })
 
-export var bla = 3
+export var bla = 'fileA - bla'

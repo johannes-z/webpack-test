@@ -4,8 +4,7 @@ var webpack = require('webpack')
 module.exports = {
   // configuration
   entry: {
-    // fileA: './src/fileA.ts',
-    polyfill: ['babel-polyfill', 'whatwg-fetch'],
+    fileA: './src/fileA.ts',
     output: './src/main.ts'
   },
   output: {
@@ -34,6 +33,7 @@ module.exports = {
   performance: {
     hints: false
   }
+  // devtool: '#source-map'
 }
 
 module.exports.plugins = [
@@ -41,6 +41,14 @@ module.exports.plugins = [
     name: 'manifest',
     minChunks: Infinity
   }),
-  new webpack.NamedChunksPlugin(),
-  new webpack.optimize.UglifyJsPlugin()
+  new webpack.NamedChunksPlugin()
+  // new webpack.optimize.UglifyJsPlugin({
+  //   compress: {
+  //     warnings: false,
+  //     drop_console: true
+  //   },
+  //   output: {
+  //     comments: false
+  //   }
+  // })
 ]

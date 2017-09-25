@@ -4,21 +4,29 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "dev": "cross-env NODE_ENV=development webpack --watch",
+    "gulp": "cross-env NODE_ENV=production gulp build",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "static": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=webpack.static.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
     "babel-preset-latest": "^6.24.1",
+    "browser-sync": "^2.18.13",
     "cross-env": "^5.0.1",
+    "gulp": "git+https://git@github.com/gulpjs/gulp.git#4.0",
+    "gulp-typescript": "^3.2.1",
     "ts-loader": "^2.3.0",
+    "typescript": "^2.4.2",
     "webpack": "^3.3.0",
     "webpack-dev-server": "^2.5.1",
     "whatwg-fetch": "^2.0.3"
   },
   "dependencies": {
-    "core-js": "^2.4.1",
-    "promise-polyfill": "^6.0.2"
+    "babel-polyfill": "^6.23.0"
   }
 }

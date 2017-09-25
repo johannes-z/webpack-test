@@ -1,3 +1,5 @@
-export var test = 5
+export default () => {
+  console.log('=> function')
+}
 
 console.log('fileB Content')
